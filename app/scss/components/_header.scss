@@ -1,0 +1,152 @@
+.header {
+  padding: 46px 0;
+  position: fixed;
+  max-width: 1200px;
+  background-color: inherit;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    height: 100px;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    background-color: transparent;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-fixed {
+  animation-name: show-menu;
+  animation-duration: 1s;
+  padding: 25px 0 15px 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  margin: 0 auto;
+
+  &::before {
+    background-color: $silver-200;
+    z-index: -1;
+  }
+}
+
+
+
+@keyframes show-menu {
+  0% {
+    opacity: 0;
+    top: -200px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.menu {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+
+  &__list {
+    display: flex;
+    margin-right: 52px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__link {
+    &.current {
+      color: $accent;
+    }
+
+  }
+}
+
+.user {
+  display: flex;
+
+  svg {
+    transition: stroke 0.5s;
+  }
+
+  &__link {
+    display: block;
+    height: 45px;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.5s, background-color 0.5s;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    path {
+      transition: stroke 0.5s;
+    }
+
+    ellipse {
+      transition: stroke 0.5s;
+    }
+
+    &:focus {
+      border-color: rgba($accent, 0.7);
+      background-color: rgba(255, 104, 56, 0.10);
+    }
+
+    &:hover {
+      path {
+        stroke: #ffffff;
+      }
+
+      ellipse {
+        stroke: #ffffff;
+      }
+
+      background-color: $accent;
+
+      span {
+        background-color: #ffffff;
+        color: $accent;
+      }
+    }
+
+    &:active {
+      background: #FFF2ED;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $accent;
+    top: 5px;
+    right: 4px;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+    transition: color 0.5s, background-color 0.5s;
+  }
+
+}

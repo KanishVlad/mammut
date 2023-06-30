@@ -1,0 +1,86 @@
+.popular {
+  text-align: center;
+
+  &__link {
+    font-size: 20px;
+    margin-bottom: 120px;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 45px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    color: $title;
+    line-height: 1.3;
+    padding: 10px 32px;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px $silver-200;
+    border-radius: 5px;
+
+    &.mixitup-control-active {
+      background-color: $accent;
+      color: #ffffff;
+
+      path {
+        fill: #ffffff;
+      }
+    }
+
+    & {
+      transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+
+      path {
+        transition: 0.3s;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba($accent, 0.70);
+      }
+
+      &:hover {
+        background-color: rgba($accent, 0.10);
+        color: $accent;
+        box-shadow: 0 0 0 2px rgba($accent, 0.70);
+
+        path {
+          fill: $accent;
+        }
+
+      }
+
+      &:active {
+        box-shadow: 0px -5px 12px 0px rgba($accent, 0.20) inset;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+
+  }
+
+}
+
+.popular__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+}
