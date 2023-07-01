@@ -89,20 +89,22 @@
     padding: 9px 5px 9px 0;
     position: relative;
     vertical-align: text-top;
-
-    path {
-      transition: stroke 0.3s;
-    }
+   
 
     &:hover {
-      path {
+      svg {
         stroke: $accent;
       }
+      
     }
   }
 
   &__icon {
     margin-bottom: -7px;
+    fill: transparent;
+    stroke: $text;
+    stroke-width: 1.5;
+    transition: stroke 0.5s;
   }
 
 
@@ -119,47 +121,35 @@
     display: inline-block;
     border: 2px solid transparent;
     height: 42px;
+    width: 42px;
     border-radius: 50%;
-    transition: border-color 0.5s;
-
-    circle {
-      transition: fill 0.5s;
-    }
-
-    path {
-      transition: fill 0.5s;
-    }
+    fill: $text;
+    position: relative;
+    background-color: $silver-200;
+    transition: border-color 0.5s, fill 0.5s, background-color 0.5s;
 
     &:focus {
       border-color: $accent;
-
-      circle {
-        fill: #FFF2ED;
-      }
-
-      path {
-        fill: $title;
-      }
+      background-color: #FFF2ED;
     }
 
     &:hover {
-      circle {
-        fill: $accent;
-      }
-
-      path {
-        fill: #FFFFFF;
-      }
+      fill: #ffffff;
+      background-color: $accent;
     }
 
     &:active {
-      circle {
-        fill: #FFF2ED;
-      }
-
-      path {
-        fill: $accent;
-      }
+      fill: $accent;
+      background-color: #FFF2ED;
     }
   }
+
+&__icon {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
+}
 }

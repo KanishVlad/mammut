@@ -84,12 +84,14 @@
   display: flex;
 
   svg {
-    transition: stroke 0.5s;
+    transition: stroke .5s;
   }
 
   &__link {
+
     display: block;
-    height: 45px;
+    height: 44px;
+    width: 44px;
     position: relative;
     border: 2px solid transparent;
     border-radius: 5px;
@@ -100,28 +102,15 @@
       margin-right: 10px;
     }
 
-    path {
-      transition: stroke 0.5s;
-    }
-
-    ellipse {
-      transition: stroke 0.5s;
-    }
-
     &:focus {
       border-color: rgba($accent, 0.7);
       background-color: rgba(255, 104, 56, 0.10);
     }
 
     &:hover {
-      path {
+      svg {
         stroke: #ffffff;
       }
-
-      ellipse {
-        stroke: #ffffff;
-      }
-
       background-color: $accent;
 
       span {
@@ -132,6 +121,12 @@
 
     &:active {
       background: #FFF2ED;
+    }
+
+    & .user__img {
+      stroke-width: 1.5px;
+      fill: transparent;
+      stroke: $title;
     }
   }
 

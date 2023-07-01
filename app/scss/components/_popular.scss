@@ -38,18 +38,11 @@
     &.mixitup-control-active {
       background-color: $accent;
       color: #ffffff;
-
-      path {
-        fill: #ffffff;
-      }
+      fill: #ffffff;
     }
 
     & {
-      transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
-
-      path {
-        transition: 0.3s;
-      }
+      transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, fill 0.5s;
 
       &:focus {
         box-shadow: 0 0 0 2px rgba($accent, 0.70);
@@ -59,10 +52,8 @@
         background-color: rgba($accent, 0.10);
         color: $accent;
         box-shadow: 0 0 0 2px rgba($accent, 0.70);
+        fill: $accent;
 
-        path {
-          fill: $accent;
-        }
 
       }
 
@@ -74,9 +65,7 @@
 
   &__icon {
     margin-right: 10px;
-
   }
-
 }
 
 .popular__list {

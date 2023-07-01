@@ -9,7 +9,7 @@ body {
   font-weight: 400;
   color: $text;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1.3;
   background-color: $bg;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,6 @@ body {
 .title {
   text-align: center;
   font-size: 36px;
-  line-height: 1.3;
   color: $title;
   font-weight: 500;
   padding-bottom: 60px;
@@ -36,7 +35,6 @@ body {
 
 .link {
   font-size: 18px;
-  line-height: 1.3;
   border: 2px solid transparent;
   border-radius: 5px;
   transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
@@ -56,26 +54,19 @@ body {
 
 .btn {
   color: #ffffff;
+  fill: #ffffff;
   font-size: 14px;
-  line-height: 1.3;
   padding: 7px 14px;
   background-color: $accent;
   border-radius: 5px;
   border: 2px solid transparent;
   transition: border-color 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s, fill 0.5s;
-  path {
-    transition: fill 0.3s;
-  }
-
-
   &:focus {
     border-color: rgba($accent, 0.7);
     background-color: rgba(255, 104, 56, 0.10);
     color: $accent;
-
-    path {
-      fill: $accent;
-    }
+    fill: $accent;
+    
   }
 
   &:hover {
@@ -83,27 +74,23 @@ body {
     border-color: rgba(255, 104, 56, 0.70);
     background-color: rgba(255, 255, 255, 0.10);
     box-shadow: 0 5px 12px 0px rgba(255, 104, 56, 0.20);
-
-    path {
-      fill: $accent;
-    }
+    fill: $accent;
   }
 
   &:active {
     background-color: rgba(255, 104, 56, 0.10);
     color: $accent;
-
-    path {
-      fill: $accent;
-    }
+    fill: $accent; 
   }
 
 }
 
 .btn--big {
-  padding: 12px 29px;
+  padding: 12px 30px;
     font-size: 18px;
 }
+
+
 
 .sr-only {
   position: absolute;
