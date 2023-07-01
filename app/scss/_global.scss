@@ -60,13 +60,15 @@ body {
   background-color: $accent;
   border-radius: 5px;
   border: 2px solid transparent;
+  position: relative;
   transition: border-color 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s, fill 0.5s;
+
   &:focus {
     border-color: rgba($accent, 0.7);
     background-color: rgba(255, 104, 56, 0.10);
     color: $accent;
     fill: $accent;
-    
+
   }
 
   &:hover {
@@ -75,22 +77,31 @@ body {
     background-color: rgba(255, 255, 255, 0.10);
     box-shadow: 0 5px 12px 0px rgba(255, 104, 56, 0.20);
     fill: $accent;
-  }
+    }
+  
 
   &:active {
     background-color: rgba(255, 104, 56, 0.10);
     color: $accent;
-    fill: $accent; 
+    fill: $accent;
   }
 
 }
 
 .btn--big {
   padding: 12px 30px;
-    font-size: 18px;
+  font-size: 18px;
 }
 
-
+.btn--mini {
+  padding: 4px 26px;
+  border-radius: 20px;
+  transition: padding 0.5s;
+  &:hover {
+    padding: 4px 7px 4px 45px;
+      
+  }
+}
 
 .sr-only {
   position: absolute;
@@ -163,7 +174,58 @@ body {
   &__price {
     font-size: 15px;
     font-weight: 500;
-  } 
+  }
 
 }
 
+.restorant-card {
+  max-width: 370px;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  padding-bottom: 23px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.10);
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0px 3px 15px 0px rgba(255, 104, 56, 0.50);
+  }
+
+  &__img {
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  &__time {
+    padding-left: 52px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 104px;
+
+    &--clock::before {
+      position: absolute;
+      content: '';
+      width: 22px;
+      height: 22px;
+      top: -2px;
+      left: 20px;
+      right: 0;
+
+      background-image: url('../images/icon/clock.svg');
+    }
+  }
+
+  &__order-link {
+
+
+    svg {
+      vertical-align: bottom;
+    }
+  }
+}
