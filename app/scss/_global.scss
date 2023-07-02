@@ -77,8 +77,8 @@ body {
     background-color: rgba(255, 255, 255, 0.10);
     box-shadow: 0 5px 12px 0px rgba(255, 104, 56, 0.20);
     fill: $accent;
-    }
-  
+  }
+
 
   &:active {
     background-color: rgba(255, 104, 56, 0.10);
@@ -96,10 +96,14 @@ body {
 .btn--mini {
   padding: 4px 26px;
   border-radius: 20px;
-  transition: padding 0.5s;
+
+
   &:hover {
-    padding: 4px 7px 4px 45px;
-      
+    .restorant-card__icon {
+      transform: translateX(70%);
+    }
+
+
   }
 }
 
@@ -222,10 +226,11 @@ body {
   }
 
   &__order-link {
-
-
     svg {
       vertical-align: bottom;
     }
+  }
+  &__icon {
+    transition: transform 0.5s;
   }
 }
