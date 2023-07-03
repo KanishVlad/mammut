@@ -3,7 +3,6 @@ body {
   height: 100%;
 }
 
-
 body {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -50,6 +49,13 @@ body {
   &:active {
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.50);
   }
+
+  &--dicoration {
+    font-size: 20px;
+    line-height: 1.5;
+    color: $title;
+    text-decoration: underline;
+  }
 }
 
 .btn {
@@ -68,7 +74,6 @@ body {
     background-color: rgba(255, 104, 56, 0.10);
     color: $accent;
     fill: $accent;
-
   }
 
   &:hover {
@@ -86,24 +91,9 @@ body {
     fill: $accent;
   }
 
-}
-
-.btn--big {
-  padding: 12px 30px;
-  font-size: 18px;
-}
-
-.btn--mini {
-  padding: 4px 26px;
-  border-radius: 20px;
-
-
-  &:hover {
-    .restorant-card__icon {
-      transform: translateX(70%);
-    }
-
-
+  &--big {
+    padding: 12px 30px;
+    font-size: 18px;
   }
 }
 
@@ -142,15 +132,9 @@ body {
   }
 }
 
-.popular__list {
-  text-align: center;
-  font-size: 14px;
-  padding-bottom: 60px;
-}
-
 .product-card {
   max-width: 210px;
-  min-height: 304px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -166,8 +150,29 @@ body {
     box-shadow: 0 0 0 1px $accent;
   }
 
-  &__img {
-    margin: 0 auto 16px;
+  &__link {
+    display: block;
+    outline: 2px solid transparent;
+    border-radius: 10px;
+    transition: transform 0.5s, outline-color 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:focus {
+      outline-color: $accent;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__img,
+  &__title,
+  &__price {
+    margin-bottom: 10px;
   }
 
   &__title {
@@ -178,59 +183,5 @@ body {
   &__price {
     font-size: 15px;
     font-weight: 500;
-  }
-
-}
-
-.restorant-card {
-  max-width: 370px;
-  background-color: #ffffff;
-  border-radius: 10px 10px 0 0;
-  padding-bottom: 23px;
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.10);
-  transition: box-shadow 0.5s;
-
-  &:hover {
-    box-shadow: 0px 3px 15px 0px rgba(255, 104, 56, 0.50);
-  }
-
-  &__img {
-    margin-bottom: 20px;
-  }
-
-  &__title {
-    font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 20px;
-    padding-left: 20px;
-  }
-
-  &__time {
-    padding-left: 52px;
-    position: relative;
-    font-size: 18px;
-    font-weight: 300;
-    margin-right: 104px;
-
-    &--clock::before {
-      position: absolute;
-      content: '';
-      width: 22px;
-      height: 22px;
-      top: -2px;
-      left: 20px;
-      right: 0;
-
-      background-image: url('../images/icon/clock.svg');
-    }
-  }
-
-  &__order-link {
-    svg {
-      vertical-align: bottom;
-    }
-  }
-  &__icon {
-    transition: transform 0.5s;
   }
 }

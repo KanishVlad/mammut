@@ -2,15 +2,15 @@
   padding: 46px 0;
   position: fixed;
   max-width: 1200px;
-  background-color: inherit;
-  z-index: 10;
+  background-color: inherit;  
   left: 0;
   right: 0;
   margin: 0 auto;
+  z-index: 1;
 
   &::before {
     content: '';
-    height: 100px;
+    height: 140px;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -18,42 +18,20 @@
     right: 0;
     transform: translateX(-50%);
     background-color: transparent;
+    z-index: -1;
   }
 
   &__container {
     display: flex;
     align-items: center;
   }
-}
 
-.header-fixed {
-  animation-name: show-menu;
-  animation-duration: 1s;
-  padding: 25px 0 15px 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 10;
-  margin: 0 auto;
-
-  &::before {
-    background-color: $silver-200;
-    z-index: -1;
+  &--scroll {
+    &::before {
+        background-color: $silver-200;
+        z-index: -1;
   }
 }
-
-
-
-@keyframes show-menu {
-  0% {
-    opacity: 0;
-    top: -200px;
-  }
-
-  100% {
-    opacity: 1;
-    top: 0;
-  }
 }
 
 .menu {
@@ -61,7 +39,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
 
   &__list {
     display: flex;
@@ -83,8 +60,8 @@
 .user {
   display: flex;
 
-  svg {
-    transition: stroke .5s;
+  &__img {
+    transition: stroke 0.5s;
   }
 
   &__link {
@@ -108,12 +85,11 @@
     }
 
     &:hover {
-      svg {
+      & .user__img {
         stroke: #ffffff;
       }
       background-color: $accent;
-
-      span {
+      & .user__number {
         background-color: #ffffff;
         color: $accent;
       }

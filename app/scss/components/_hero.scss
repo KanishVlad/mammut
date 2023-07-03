@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 145px;
+  padding-top: 159px;
 
   &__wrapper {
       background-repeat: no-repeat;
@@ -7,13 +7,12 @@
       background-size: contain;
       display: flex;
       align-items: center;
-      height: 62vh;
+      height: 60vh;
   }
 
   &__content {
     max-width: 476px;
     width: 100%;
-    
   }
 
   &__title {
@@ -30,26 +29,19 @@
   }
 
   &__text {
-    max-width: 450px;
+    padding-right: 7px;
     margin-bottom: 20px;
     line-height: 1.5;
   }
 
-  &__order-link {
-    margin-right: 21px;
-  }
-
   &__link {
-    text-decoration: underline;
-    font-size: 20px;
-    line-height: 1.5;
-    color: $title;
-
+    &:not(:last-child) {
+      margin-right: 21px;
+    }
     &:hover,
     &:focus,
     &:active {
       text-decoration: none;
     }
   }
-
 }

@@ -2,7 +2,7 @@
 
   &__wrapper {
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
   }
 
   &__inner {
@@ -28,8 +28,6 @@
     border: 1px solid $gray;
     border-radius: 5px;
     padding: 11px 15px;
-    max-width: 200px;
-    width: 100%;
     outline: 2px solid transparent;
     transition: outline 0.5s;
 
@@ -53,16 +51,13 @@
     padding: 13px;
   }
 
-  &__nav {
-    margin-right: 132px;
-  }
-
   &__list {
     display: grid;
     grid-template-columns: 123px 87px 110px;
-    grid-gap: 16px 90px;
+    grid-template-rows: repeat(3, 30px);
+    grid-gap: 13px 90px;
+    margin-right: 132px;
   }
-
 
   &__copyright {
     padding: 30px 0;
@@ -80,22 +75,23 @@
 .address {
   padding-top: 3px;
 
-  &__item {
+  &__list {
     margin-bottom: 20px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 
   &__link {
     font-size: 16px;
     padding: 9px 5px 9px 0;
-    position: relative;
-    vertical-align: text-top;
-   
-
     &:hover {
-      svg {
+      & .address__icon {
         stroke: $accent;
       }
-      
     }
   }
 
@@ -106,15 +102,17 @@
     stroke-width: 1.5;
     transition: stroke 0.5s;
   }
-
-
 }
 
 .social {
   display: flex;
 
   &__item {
-    margin-right: 9px;
+    width: 39px;
+    height: 39px;
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
   }
 
   &__link {
@@ -144,12 +142,12 @@
     }
   }
 
-&__icon {
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: 0;
-  bottom: 0;
-  transform: translate(50%, 50%);
-}
+  &__icon {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: 0;
+    bottom: 0;
+    transform: translate(50%, 50%);
+  }
 }
