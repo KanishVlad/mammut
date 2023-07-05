@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 159px;
+  padding-top: 160px;
 
   &__wrapper {
       background-repeat: no-repeat;
@@ -7,7 +7,7 @@
       background-size: contain;
       display: flex;
       align-items: center;
-      height: 60vh;
+      height: 61vh;
   }
 
   &__content {
@@ -34,10 +34,11 @@
     line-height: 1.5;
   }
 
+  &__btn {
+    margin-right: 21px;
+  }
+
   &__link {
-    &:not(:last-child) {
-      margin-right: 21px;
-    }
     &:hover,
     &:focus,
     &:active {

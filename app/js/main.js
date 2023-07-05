@@ -20,7 +20,6 @@ $(function(){
     "animation": {
       "duration": 700,
       "nudge": false,
-
     }
   });
 

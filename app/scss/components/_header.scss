@@ -1,5 +1,5 @@
 .header {
-  padding: 46px 0;
+  padding: 58px 0;
   position: fixed;
   max-width: 1200px;
   background-color: inherit;  
@@ -10,7 +10,7 @@
 
   &::before {
     content: '';
-    height: 140px;
+    height: 160px;
     width: 100vw;
     position: absolute;
     top: 0;

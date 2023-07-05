@@ -8,21 +8,24 @@
   &__inner {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-right: 64px;
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    margin-top: 32px;
     max-width: 200px;
     width: 100%;
     font-size: 14px;
     line-height: 1.3;
   }
 
-  &__input {
+  &__label {
     margin-bottom: 12px;
+  }
+
+  &__input {
     color: $title;
     opacity: .8;
     border: 1px solid $gray;
