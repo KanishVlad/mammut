@@ -205,6 +205,7 @@ body {
   padding-bottom: 23px;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.10);
   transition: box-shadow 0.5s;
+  height: 100%;
 
 
   &:hover {
@@ -238,7 +239,7 @@ body {
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 20px;
-    padding-left: 20px;
+    padding: 0 20px;
   }
 
   &__time {

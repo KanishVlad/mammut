@@ -1,7 +1,6 @@
 .testimonials {
 
   &__slider {
-
     .slick-next,
     .slick-prev {
       position: absolute;
@@ -15,6 +14,7 @@
       border: 3px solid $gray;
       outline: 2px solid transparent;
       display: flex;
+      bottom: 0;
       align-items: center;
       border-radius: 50%;
       transition: outline-color 0.5s, background-color 0.5s, border-color 0.5s;
@@ -48,6 +48,7 @@
 
     .slick-prev {
       left: 39%;
+
     }
 
     .slick-next {
@@ -67,7 +68,7 @@
       position: absolute;
       bottom: 10px;
       left: 44%;
-      margin: 0 20px;
+      margin: 0 15px;
 
       li {
 
@@ -120,6 +121,7 @@
 
   &__content {
     max-width: 569px;
+    margin-bottom: 50px;
   }
 
   &__text {

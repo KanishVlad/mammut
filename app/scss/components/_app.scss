@@ -1,0 +1,49 @@
+.app {
+  &__inner {
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    height: 35vh;
+    display: flex;
+  }
+
+  &__content {
+    max-width: 470px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    text-align: left;
+    padding: 40px 0 14px;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  &__link {
+    display: block;
+    height: 40px;
+    border-radius: 7px;
+    outline: 2px solid transparent;
+    transition: outline-color 0.5s, opacity 0.5s;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:focus {
+      outline-color: $accent;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
