@@ -2,7 +2,7 @@
   padding: 58px 0;
   position: fixed;
   max-width: 1200px;
-  background-color: inherit;  
+  background-color: inherit;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -28,10 +28,76 @@
 
   &--scroll {
     &::before {
-        background-color: $silver-200;
-        z-index: -1;
+      background-color: $silver-200;
+      z-index: -1;
+    }
   }
-}
+
+  &__user {
+    display: flex;
+  }
+
+  &__icon {
+    transition: stroke 0.5s;
+  }
+
+  &__btn {
+    display: block;
+    height: 44px;
+    width: 44px;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.5s, background-color 0.5s;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:focus {
+      border-color: rgba($accent, 0.7);
+      background-color: rgba(255, 104, 56, 0.10);
+    }
+
+    &:hover {
+      & .header__icon {
+        stroke: #ffffff;
+      }
+
+      background-color: $accent;
+
+      & .header__number {
+        background-color: #ffffff;
+        color: $accent;
+      }
+    }
+
+    &:active {
+      background: #FFF2ED;
+    }
+
+    & .header__icon {
+      stroke-width: 1.5px;
+      fill: transparent;
+      stroke: $title;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $accent;
+    top: 5px;
+    right: 4px;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+    transition: color 0.5s, background-color 0.5s;
+  }
+
 }
 
 .menu {
@@ -55,69 +121,4 @@
     }
 
   }
-}
-
-.user {
-  display: flex;
-
-  &__img {
-    transition: stroke 0.5s;
-  }
-
-  &__link {
-
-    display: block;
-    height: 44px;
-    width: 44px;
-    position: relative;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    padding: 10px;
-    transition: border-color 0.5s, background-color 0.5s;
-
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-
-    &:focus {
-      border-color: rgba($accent, 0.7);
-      background-color: rgba(255, 104, 56, 0.10);
-    }
-
-    &:hover {
-      & .user__img {
-        stroke: #ffffff;
-      }
-      background-color: $accent;
-      & .user__number {
-        background-color: #ffffff;
-        color: $accent;
-      }
-    }
-
-    &:active {
-      background: #FFF2ED;
-    }
-
-    & .user__img {
-      stroke-width: 1.5px;
-      fill: transparent;
-      stroke: $title;
-    }
-  }
-
-  &__number {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: $accent;
-    top: 5px;
-    right: 4px;
-    font-size: 10px;
-    color: #ffffff;
-    text-align: center;
-    transition: color 0.5s, background-color 0.5s;
-  }
-
 }

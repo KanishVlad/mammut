@@ -29,13 +29,13 @@
   }
 
   &__text {
-    padding-right: 7px;
-    margin-bottom: 20px;
+    margin:0 7px 20px 0;
     line-height: 1.5;
   }
 
   &__btn {
     margin-right: 21px;
+    display: inline-block;
   }
 
   &__link {

@@ -6,10 +6,11 @@
   }
 
   &__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     margin-right: 64px;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
   }
 
   &__form {
