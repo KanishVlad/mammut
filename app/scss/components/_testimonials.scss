@@ -1,0 +1,174 @@
+.testimonials {
+
+  &__slider {
+    .slick-next,
+    .slick-prev {
+      position: absolute;
+      bottom: -3px;
+      transform: translateY(-50%);
+      transform: translateX(43%);
+      z-index: 5;
+      display: flex;
+      width: 40px;
+      height: 40px;
+      border: 3px solid $gray;
+      outline: 2px solid transparent;
+      display: flex;
+      bottom: 0;
+      align-items: center;
+      border-radius: 50%;
+      transition: outline-color 0.5s, background-color 0.5s, border-color 0.5s;
+
+      &:focus {
+        outline-color: $accent;
+      }
+
+      &:hover {
+        background-color: #FFF2ED;
+        border-color: rgba(255, 104, 56, 0.50);
+
+        & .slick-icon {
+          fill: rgba(255, 104, 56, 0.50);
+        }
+      }
+
+      &:active {
+        border-color: rgba(255, 104, 56, 0.50);
+
+        & .slick-icon {
+          fill: $accent;
+        }
+      }
+
+      & .slick-icon {
+        transition: fill 0.5s;
+        fill: $gray;
+      }
+    }
+
+    .slick-prev {
+      left: 39%;
+
+    }
+
+    .slick-next {
+      left: 55%;
+    }
+
+    .slick-disabled {
+      border: 3px solid $accent;
+
+      & .slick-icon {
+        fill: $accent;
+      }
+    }
+
+    .slick-dots {
+      display: flex;
+      position: absolute;
+      bottom: 10px;
+      left: 44%;
+      margin: 0 15px;
+
+      li {
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+
+        button {
+          border-radius: 50%;
+          padding: 0;
+          font-size: 0;
+          background-color: $gray;
+          width: 15px;
+          height: 15px;
+          border: 2px solid transparent;
+          transition: border-color 0.5s, background-color 0.5s;
+
+          &:focus {
+            border-color: $accent;
+          }
+
+          &:hover {
+            background-color: #FFF2ED;
+            border-color: rgba(255, 104, 56, 0.50);
+          }
+
+          &:active {
+            background-color: rgba(255, 104, 56, 0.50);
+          }
+        }
+
+        &.slick-active {
+          button {
+            background-color: $accent;
+          }
+
+        }
+      }
+    }
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    margin: 0 80px 66px 90px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__content {
+    max-width: 569px;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    font-style: italic;
+    margin: 30px 0;
+    line-height: 1.5;
+    position: relative;
+    z-index: 5;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 19px;
+      top: 32px;
+      bottom: 0;
+      left: -40px;
+      right: 0;
+      background-image: url('../images/icon/left-quotes.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 10;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 19px;
+      bottom: 28px;
+      right: -40px;
+      background-image: url('../images/icon/right-quotes.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 10;
+    }
+
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 15px;
+    color: $accent;
+    font-weight: 500;
+  }
+
+  &__user-descript {
+    font-size: 14px;
+  }
+}

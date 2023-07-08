@@ -95,6 +95,18 @@ body {
     padding: 12px 30px;
     font-size: 18px;
   }
+
+  &--mini {
+    padding: 4px 25px;
+    border-radius: 20px;
+
+    &:hover {
+      .restaurant-card__icon {
+        transform: translateX(70%);
+      }
+
+    }
+  }
 }
 
 .sr-only {
@@ -187,3 +199,77 @@ body {
   }
 }
 
+.restaurant-card {
+  max-width: 370px;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  padding-bottom: 23px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.10);
+  transition: box-shadow 0.5s;
+  height: 100%;
+
+
+  &:hover {
+    box-shadow: 0 3px 15px 0 rgba(255, 104, 56, 0.50);
+  }
+
+  &__link {
+    display: block;
+    outline: 4px solid transparent;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.5s, outline-color 0.5s, opacity 0.5s;
+
+    &:focus {
+      outline-color: $accent;
+    }
+
+    &:hover {
+      transform: scale(0.9);
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  &__time {
+    padding-left: 52px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 104px;
+
+    &--clock::before {
+      position: absolute;
+      content: '';
+      width: 22px;
+      height: 22px;
+      top: -2px;
+      left: 20px;
+      right: 0;
+
+      background-image: url('../images/standart-icon/clock.svg');
+    }
+  }
+
+  &__btn {
+    & .restaurant-card__icon {
+      vertical-align: bottom;
+    }
+  }
+
+  &__icon {
+    transition: transform 0.5s;
+  }
+}

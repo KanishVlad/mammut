@@ -1,0 +1,75 @@
+.features {
+  &__inner {
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 74px;
+    height: 54vh;
+  }
+
+  &__content {
+    max-width: 470px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__title,
+  &__text,
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__text {
+    line-height: 1.5;
+  }
+
+  &__item {
+    font-size: 24px;
+    line-height: 1.5;
+    color: $title;
+    padding-left: 64px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-text {
+    position: relative;
+
+    &--timer::before {
+      content: '';
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      left: -63px;
+      background-image: url('../images/standart-icon/timer-icon.svg');
+    }
+
+    &--delivery::before {
+      content: '';
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      left: -63px;
+      background-image: url('../images/standart-icon/delivery-icon.svg');
+    }
+
+    &--restaurant::before {
+      content: '';
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      left: -63px;
+      background-image: url('../images/standart-icon/restaurant-icon.svg');
+    }
+  }
+}
