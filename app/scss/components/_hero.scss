@@ -1,18 +1,49 @@
 .hero {
   padding-top: 160px;
 
+  @include r($tb) {
+    padding-top: 114px
+  }
+
+  @include r($ph) {
+    padding-top: 73px
+  }
+
   &__wrapper {
-      background-repeat: no-repeat;
-      background-position: center right;
-      background-size: contain;
-      display: flex;
-      align-items: center;
-      height: 61vh;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+
+    @include r($ph) {
+      background-size: 256px 294px;
+    }
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 61vh;
+
+    @include r($pc) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(249, 250, 255, .85);
+      }
+
+    }
   }
 
   &__content {
     max-width: 476px;
     width: 100%;
+
+    @include r($pc) {
+      z-index: 10;
+    }
   }
 
   &__title {
@@ -21,6 +52,18 @@
     color: $title;
     text-transform: uppercase;
     margin-bottom: 20px;
+
+    @include r($tb-2) {
+      font-size: 55px;
+    }
+
+    @include r($tb) {
+      font-size: 50px;
+    }
+
+    @include r($ph) {
+      font-size: 40px;
+    }
   }
 
   &__subtitle {
@@ -29,8 +72,16 @@
   }
 
   &__text {
-    margin:0 7px 20px 0;
+    margin: 0 7px 20px 0;
     line-height: 1.5;
+
+    @include r($tb) {
+      font-size: 18px;
+    }
+
+    @include r($ph) {
+      font-size: 16px;
+    }
   }
 
   &__btn {
@@ -39,6 +90,10 @@
   }
 
   &__link {
+    @include r($ph) {
+      font-size: 16px;
+    }
+
     &:hover,
     &:focus,
     &:active {
