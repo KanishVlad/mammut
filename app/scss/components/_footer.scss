@@ -3,10 +3,37 @@
   &__wrapper {
     display: flex;
     padding-bottom: 60px;
+
+    @include r($tb-2) {
+      flex-wrap: wrap;
+    }
+
+    @include r($ph) {
+
+      flex-direction: column;
+
+    }
   }
 
   &__inner {
     margin-right: 64px;
+
+    @include r($pc) {
+      margin-right: 45px;
+    }
+
+    @include r($tb-2) {
+      margin-bottom: 25px;
+    }
+
+    @include r($ph) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .logo__img {
+    width: 200px;
+    height: 39px;
   }
 
   &__logo {
@@ -61,6 +88,26 @@
     grid-template-rows: repeat(3, 30px);
     grid-gap: 13px 90px;
     margin-right: 132px;
+
+    @include r($pc) {
+      grid-gap: 13px 65px;
+      margin-right: 65px;
+    }
+
+    @include r($tb-2) {
+      margin-right: 40px;
+    }
+
+    @include r($tb) {
+      margin: 0 90px 25px 0;
+    }
+
+    @include r($ph) {
+      order: 1;
+      grid-template-columns: auto;
+      grid-gap: 20px 65px;
+      margin: 0;
+    }
   }
 
   &__copyright {
@@ -79,6 +126,9 @@
 
 .address {
   padding-top: 3px;
+  @include r($ph) {
+      margin-bottom: 30px;
+    }
 
   &__list {
     margin-bottom: 20px;
@@ -97,6 +147,7 @@
   &__link {
     font-size: 16px;
     padding: 9px 5px 9px 0;
+
     &:hover {
       & .address__icon {
         stroke: $accent;
@@ -119,6 +170,7 @@
   &__item {
     width: 39px;
     height: 39px;
+
     &:not(:last-child) {
       margin-right: 14px;
     }

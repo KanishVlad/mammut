@@ -1,5 +1,17 @@
 $(function(){
 
+
+  $('.burger, .menu__list a').on('click', function () {
+    $('.burger').toggleClass('burger--active');
+    $('.menu__list').toggleClass('menu__list--active');
+
+    if ($('.menu__list').hasClass('menu__list--active')) {
+      $('body').css('overflow', 'hidden');
+    } else {
+      $('body').css('overflow', 'auto');
+    }
+  });
+
   $('.testimonials__slider').slick({
     dots: true,
     prevArrow: '<button type="button" class="slick-prev"><svg class="slick-icon" width="37" height="37"><use href="images/sprite.svg#icon-prev-arrow"></use></svg></button>',

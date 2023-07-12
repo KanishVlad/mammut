@@ -5,4 +5,18 @@ $bg: #f9faff;
 $silver-200: #ececec;
 $gray: #c2c2c2;
 
+//breakpoints
+
+$pc: 1200;
+$tb-2: 992;
+$tb: 768;
+$ph: 576;
+
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+
 
