@@ -42,6 +42,17 @@ body {
   color: $title;
   font-weight: 500;
   margin-bottom: 60px;
+  @include r($tb-2) {
+    font-size: 32px;
+  }
+  @include r($tb) {
+    margin-bottom: 45px;
+    font-size: 28px;
+  }
+  @include r($ph) {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
 }
 
 .link {
@@ -80,6 +91,9 @@ body {
   border: 2px solid transparent;
   position: relative;
   transition: border-color 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s, fill 0.5s;
+  @include r($ph) {
+    padding: 6px 16px;
+  }
 
   &:focus {
     border-color: rgba($accent, 0.7);
@@ -174,6 +188,9 @@ body {
   background-color: #ffffff;
   box-shadow: 0 0 0 1px $silver-200;
   transition: box-shadow 0.5s;
+  @include r($pc) {
+      max-width: 100%;
+    }
 
   &:hover {
     box-shadow: 0 0 0 1px $accent;
