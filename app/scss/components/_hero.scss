@@ -33,7 +33,10 @@
         bottom: 0;
         background: rgba(249, 250, 255, .85);
       }
+    }
 
+    @include r($ph) {
+      height: 300px;
     }
   }
 

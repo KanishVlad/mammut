@@ -7,6 +7,30 @@
     justify-content: flex-end;
     margin: 0 74px;
     height: 54vh;
+    position: relative;
+
+    @include r($pc) {
+      margin: 0 40px;
+    }
+
+    @include r($ph) {
+      margin: 0 5px;
+      height: 462px;
+    
+    }
+
+
+    @include r($tb-2) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(249, 250, 255, .85);
+      }
+    }
   }
 
   &__content {
@@ -15,6 +39,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    z-index: 10;
   }
 
   &__title,
@@ -29,6 +54,17 @@
 
   &__text {
     line-height: 1.5;
+
+    @include r($ph) {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    @include r($ph) {
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
@@ -39,6 +75,22 @@
 
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+
+    @include r($tb-2) {
+      font-size: 22px;
+    }
+
+    @include r($tb) {
+      font-size: 20px;
+    }
+
+    @include r($ph) {
+      font-size: 18px;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
   }
 

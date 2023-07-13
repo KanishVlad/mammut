@@ -58,7 +58,7 @@
     display: flex;
     align-items: center;
     @include r($tb-2) {
-      overflow: auto;
+      overflow-x: auto;
     }
     color: $title;
     line-height: 1.3;
