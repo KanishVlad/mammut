@@ -1,0 +1,13 @@
+.action {
+  &__title {
+    text-align: left;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid: 30px;
+  }
+  &__card {
+    justify-content: flex-start;
+  }
+}
