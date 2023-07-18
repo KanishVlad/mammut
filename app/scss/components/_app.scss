@@ -23,16 +23,22 @@
 
   &__title {
     text-align: left;
-    margin: 40px 0;
+    margin: 44px 0;
 
-    @include r($ph) {
-      margin: 40px 0 15px;
+    @include r($tb-2) {
+      margin:0 0 15px;
     }
+
   }
 
   &__text {
     margin-bottom: 30px;
     line-height: 1.5;
+
+    @include r($tb-2) {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
 
     @include r($ph) {
       font-size: 14px;

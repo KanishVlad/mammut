@@ -75,6 +75,12 @@
     &:hover::placeholder {
       color: $title;
     }
+
+  }
+
+  &__form-icon {
+    fill: #ffffff;
+    transition: fill 0.5s;
   }
 
   &__btn {
@@ -127,9 +133,10 @@
 
 .address {
   padding-top: 3px;
+
   @include r($ph) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 30px;
+  }
 
   &__list {
     margin-bottom: 20px;

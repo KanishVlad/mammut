@@ -11,6 +11,7 @@ $pc: 1200;
 $tb-2: 992;
 $tb: 768;
 $ph: 576;
+$phm: 360;
 
 @mixin r($width) {
   @media (max-width: #{$width}px) {

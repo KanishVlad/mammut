@@ -1,6 +1,10 @@
 .hero {
   padding-top: 160px;
 
+  @include r($tb-2) {
+      padding-top: 130px
+    }
+
   @include r($tb) {
     padding-top: 114px
   }
@@ -10,9 +14,6 @@
   }
 
   &__wrapper {
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: contain;
 
     @include r($ph) {
       background-size: 256px 294px;
@@ -21,7 +22,10 @@
     display: flex;
     align-items: center;
     position: relative;
-    height: 61vh;
+    min-height: 662px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 550px 650px;
 
     @include r($pc) {
       &::after {
@@ -33,10 +37,12 @@
         bottom: 0;
         background: rgba(249, 250, 255, .85);
       }
+
     }
 
     @include r($ph) {
-      height: 300px;
+      min-height: 345px;
+      background-size: 247px 294px;
     }
   }
 
