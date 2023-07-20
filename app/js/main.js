@@ -7,23 +7,64 @@ $(function () {
   //   infinite: false,
   // });
 
-  $(document).ready(function () {
-    // Отримуємо поточний URL сторінки
-    var currentUrl = window.location.href;
+  var $range = $(".filter-price__pricing"),
+    $inputFrom = $(".filter-price__from"),
+    $inputTo = $(".filter-price__to"),
+    instance,
+    min = 0,
+    max = 1000,
+    from = 0,
+    to = 0;
 
-    // Знаходимо всі посилання з класом "nav-link"
-    var navLinks = $('.menu__link, .mobile__link');
+  $range.ionRangeSlider({
+    skin: "round",
+    type: "double",
+    min: min,
+    max: max,
+    onStart: updateInputs,
+    onChange: updateInputs
+  });
+  instance = $range.data("ionRangeSlider");
 
-    // Перевіряємо кожне посилання, чи співпадає його URL з поточним URL
-    navLinks.each(function () {
-      var linkUrl = $(this).attr('href');
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
 
-      // Якщо URL посилання співпадає з поточним URL, додаємо клас "active"
-      if (currentUrl.indexOf(linkUrl) !== -1) {
-        $(this).addClass('current');
-      }
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);
+  }
+
+  $inputFrom.on("input", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val
     });
   });
+
+  $inputTo.on("input", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+
+    instance.update({
+      to: val
+    });
+  });
+
+  $('.catalog__style').styler();
 
   
   $(document).ready(function () {
