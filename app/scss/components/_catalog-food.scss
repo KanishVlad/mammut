@@ -4,10 +4,45 @@
     display: flex;
     justify-content: space-between;
     padding-top: 60px;
+
+    @include r($tb-2) {
+      align-items: flex-start;
+    }
+
+    @include r($tb) {
+      flex-direction: column;
+    }
+
+    @include r($ph) {
+      padding-top: 40px;
+    }
+  }
+
+  &__title {
+    @include r($ph) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__selects {
+    @include r($tb-2) {
+      display: flex;
+      margin-bottom: 45px;
+    }
+
+    @include r($ph) {
+      display: flex;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
   }
 
   &__inner {
     display: flex;
+
+    @include r($tb-2) {
+      justify-content: center;
+    }
   }
 
   &__name {
@@ -36,6 +71,87 @@
     font-size: 14px;
     text-align: center;
     padding-bottom: 60px;
+
+    @include r($tb-2) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include r($tb) {
+      padding-bottom: 45px;
+    }
+
+    @include r($ph) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5px;
+      padding-bottom: 10px;
+
+    }
+  }
+
+  &__filters {
+    @include r($tb-2) {
+      padding: 20px 20px 20px 0;
+      overflow-y: scroll;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 85%;
+      background-color: #fff;
+      z-index: 1001;
+      transform: translateX(-300%);
+      transition: transform 1s;
+    }
+
+    &--active {
+      transform: translateX(0);
+    }
+  }
+
+  &__filters-btn {
+    display: none;
+    width: 47px;
+    height: 47px;
+    background-color: #FAEDED;
+
+    @include r($tb-2) {
+      display: block;
+      margin-right: 20px;
+    }
+
+    @include r($ph) {
+      margin-bottom: 15px;
+
+    }
+  }
+
+  &__close-btn {
+    width: 44px;
+    height: 44px;
+    background-color: #FAEDED;
+    margin-bottom: 20px;
+    margin-left: auto;
+    display: none;
+
+    @include r($tb-2) {
+      display: block;
+    }
+
+  }
+
+  &__icon {
+    fill: $accent;
+  }
+
+  &__icon-close {
+    fill: $title;
+  }
+
+}
+
+.hidden {
+  @include r($ph) {
+    display: none;
   }
 }
 
@@ -101,12 +217,14 @@
   padding: 10px;
   font-size: 14px;
   transition: color 0.5s;
+
   &:hover {
     color: $accent;
   }
 }
 
 .filter {
+
   &__block {
     width: 270px;
     background-color: #FFFFFF;
@@ -115,6 +233,10 @@
     border: 1px solid #ECECEC;
     position: relative;
     margin-right: 30px;
+
+    @include r($tb-2) {
+      margin-right: 20px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 22px;
@@ -154,6 +276,9 @@
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.3px;
+    &-current {
+      color: $accent;
+    }
   }
 }
 
@@ -307,4 +432,3 @@
 .irs--round .irs-max {
   display: none;
 }
-
