@@ -7,6 +7,13 @@ $(function () {
   //   infinite: false,
   // });
 
+  // $('.recent__content').slick({
+  //   infinite: false,
+  //   speed: 300,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  // });
+
   $(".menu__scroll").on("click", function (event) {
     event.preventDefault();
 
@@ -155,3 +162,13 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".button-prev",
   },
 });
+
+var swiper = new Swiper(".recent__content", {
+  slidesPerView: 5,
+  spaceBetween: 30,
+  
+    navigation: {
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
+    },
+  });

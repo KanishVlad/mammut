@@ -1,10 +1,14 @@
 @include('components/_head.html')
 
-@include('components/_header.html')
+@include('components/_header.html', {
+"link1": "",
+"link2": "current",
+})
 
 <main class="main">
 
-  @include('components/_breadcrumbs-product.html')
+@include('components/_breadcrumbs-product.html')
+@include('components/_recent.html')
 
 </main>
 
