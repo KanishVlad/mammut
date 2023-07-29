@@ -97,7 +97,7 @@
       left: 0;
       bottom: 0;
       width: 85%;
-      background-color: #fff;
+      background-color: #FFFFFF;
       z-index: 1001;
       transform: translateX(-300%);
       transition: transform 1s;
@@ -112,7 +112,7 @@
     display: none;
     width: 47px;
     height: 47px;
-    background-color: #FAEDED;
+    background-color: $bg-lite;
 
     @include r($tb-2) {
       display: block;
@@ -128,7 +128,7 @@
   &__close-btn {
     width: 44px;
     height: 44px;
-    background-color: #FAEDED;
+    background-color: $bg-lite;
     margin-bottom: 20px;
     margin-left: auto;
     display: none;
@@ -158,8 +158,8 @@
 .jq-selectbox {
   &__select {
     border-radius: 3px;
-    border: 1px solid #C2C2C2;
-    background: #FFF;
+    border: 1px solid $gray;
+    background: #FFFFFF;
     padding: 15px 20px 15px 15px;
     font-size: 14px;
     color: $text;
@@ -169,7 +169,7 @@
     transition: border-color 0.5s, color 0.5s;
 
     &:hover {
-      background: #FFF;
+      background: #FFFFFF;
       border-color: $accent;
       color: $accent;
 
@@ -206,14 +206,14 @@
 
 .jq-selectbox__dropdown {
   ul {
-    border: 1px solid #C2C2C2;
+    border: 1px solid $gray;
     cursor: pointer;
   }
 }
 
 .jq-selectbox li,
 .jq-select-multiple li {
-  background-color: #fff;
+  background-color: #FFFFFF;
   padding: 10px;
   font-size: 14px;
   transition: color 0.5s;
@@ -230,7 +230,7 @@
     background-color: #FFFFFF;
     padding: 15px 15px 25px 10px;
     border-radius: 5px;
-    border: 1px solid #ECECEC;
+    border: 1px solid $border;
     position: relative;
     margin-right: 30px;
 
@@ -247,7 +247,7 @@
       position: absolute;
       width: 100%;
       height: 1px;
-      background-color: #ECECEC;
+      background-color: $border;
       top: 59px;
       left: 0;
     }
@@ -276,6 +276,7 @@
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.3px;
+
     &-current {
       color: $accent;
     }
@@ -330,8 +331,9 @@
     background-color: rgba(255, 104, 56, 0.20);
     position: absolute;
     border-radius: 3px;
-    border: 2px solid #ECECEC;
+    border: 2px solid $border;
     transition: border-color 0.5s;
+    outline: 20px solid transparent;
   }
 
   &__text {
@@ -350,7 +352,7 @@
     letter-spacing: 0.3px;
     align-items: center;
     line-height: 1.2;
-    color: #c2c2c2;
+    color: $gray;
     margin-right: 15px;
   }
 
@@ -361,14 +363,14 @@
     padding: 12px 12px 12px 15px;
     width: 70px;
     height: 40px;
-    color: #31352b;
+    color: $text;
     text-align: center;
     font-size: 16px;
     line-height: 1;
     letter-spacing: .48px;
     border-radius: 3px;
-    border: 1px solid #ececec;
-    background-color: #faeded;
+    border: 1px solid $border;
+    background-color: $bg-lite;
     outline: 1px solid transparent;
     transition: outline-color 0.5s;
 
@@ -381,7 +383,7 @@
 .irs--flat .irs-line {
   top: 29px;
   height: 2px;
-  background-color: #c2c2c2;
+  background-color: $gray;
 }
 
 .irs--flat .irs-handle {

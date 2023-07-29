@@ -1,0 +1,322 @@
+.interection {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: $line;
+    top: 0;
+  }
+
+  &__container {
+    max-width: 725px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__top {
+    padding-top: 30px;
+  }
+
+  &__list {
+    display: flex;
+    margin-bottom: 30px;
+    overflow-x: auto;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include r($tb) {
+        margin-right: 45px;
+      }
+
+      @include r($ph) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 24px;
+    line-height: 1.5;
+    white-space: nowrap;
+
+    @include r($tb) {
+      font-size: 22px;
+    }
+
+    @include r($ph) {
+      font-size: 20px;
+    }
+  }
+
+  & .current {
+    color: $accent;
+  }
+
+  &__content-item {
+    display: none;
+  }
+
+  &__content-text {
+    line-height: 1.5;
+
+    @include r($tb) {
+      font-size: 18px;
+    }
+
+    @include r($ph) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__characteristics-item {
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__characteristics-title {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+
+    @include r($tb) {
+      font-size: 18px;
+    }
+
+    @include r($ph) {
+      font-size: 16px;
+    }
+  }
+
+  &__characteristics-span {
+    font-weight: 400;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+    color: $title;
+    font-weight: 500;
+    margin-bottom: 30px;
+
+    @include r($tb) {
+      font-size: 22px;
+    }
+
+    @include r($ph) {
+      font-size: 20px;
+    }
+  }
+
+  &__reviews {
+    margin-bottom: 60px;
+
+    @include r($ph) {
+      margin-bottom: 45px;
+    }
+  }
+
+
+  &__reviews-wrapper {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 46px;
+
+      @include r($ph) {
+        margin-bottom: 30px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        left: 0;
+        height: 1px;
+        background-color: $line;
+      }
+    }
+
+  }
+
+  &__reviews-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #505050;
+
+    @include r($ph) {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__reviews-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__reviews-avatar {
+    margin-right: 24px;
+    border-radius: 50%;
+
+    @include r($ph) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__reviews-name {
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 10px;
+
+    @include r($ph) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__reviews-date {
+    font-size: 18px;
+  }
+
+  &__reviews-rating {
+    display: flex;
+
+    @include r($ph) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__reviews-text {
+    color: #505050;
+    line-height: 1.5;
+    position: relative;
+    display: block;
+
+    @include r($tb) {
+      font-size: 18px;
+    }
+
+    @include r($ph) {
+      font-size: 16px;
+    }
+  }
+
+  &__comment {
+    color: #505050;
+  }
+
+  &__form-inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__form-text {
+    margin-right: 21px;
+  }
+
+  &__form-area {
+    width: 400px;
+    min-height: 165px;
+    resize: vertical;
+    max-height: 230px;
+    margin-bottom: 30px;
+
+    @include r($ph) {
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__form-labels {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($tb) {
+      flex-direction: column;
+    }
+  }
+
+  &__form-span {
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  &__form-label {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include r($ph) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__form-inputs {
+    margin-bottom: 30px;
+  }
+
+  &__form-input {
+    width: 260px;
+    height: 57px;
+
+    @include r($ph) {
+      max-width: 400px;
+      width: 100%;
+      height: 54px;
+    }
+  }
+
+  &__form-descript {
+    display: block;
+    padding-left: 34px;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+.style {
+  display: block;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: 1px solid transparent;
+  border: 1px solid $gray;
+  transition: outline-color 0.5s, color 0.5s;
+
+  &::placeholder {
+    transition: color 0.5s;
+    color: #C1C1C1;
+  }
+
+  &:focus {
+    outline-color: $accent;
+  }
+
+  &:hover::placeholder {
+    color: $title;
+  }
+}
+
+.interection__content-item--active {
+  display: block;
+}

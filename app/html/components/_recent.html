@@ -2,46 +2,49 @@
   <div class="container">
     <div class="recent__inner">
       <div class="recent__box">
-      <h2 class="title recent__title">Вас може зацікавити</h2>
-      <div class="recent__nav">
-        <button class="button-prev">
-          <svg class="slick-icon" width="37" height="37">
-            <use href="images/sprite.svg#icon-prev-arrow"></use>
-          </svg>
-        </button>
-        <button class="button-next">
-          <svg class="slick-icon" width="37" height="37">
-            <use href="images/sprite.svg#icon-next-arrow"></use>
-          </svg>
-        </button>
+        <h2 class="title recent__title">Вас може зацікавити</h2>
+        <div class="recent__nav">
+          <button class="button-prev">
+            <span class="sr-only">попередній товар</span>
+            <svg class="slick-icon" width="37" height="37">
+              <use href="images/sprite.svg#icon-prev-arrow"></use>
+            </svg>
+          </button>
+          <button class="button-next">
+            <span class="sr-only">наступний товар</span>
+            <svg class="slick-icon" width="37" height="37">
+              <use href="images/sprite.svg#icon-next-arrow"></use>
+            </svg>
+          </button>
         </div>
       </div>
-      <div class="swiper mySwiper recent__content">
-        <div class="recent__content-box swiper-wrapper">
-          <div class="recent__item swiper-slide">
-            <article class="product-card">
-            <a class="product-card__link" href="#">
-              <img class="product-card__img" src="images/content/burger-1.jpg" alt="чізбургер з листям салату" width="140"
-                height="140">
-            </a>
-            <h3 class="product-card__title">
-              Чізбургер з листям салату
-            </h3>
-            <span class="product-card__price">
-              160
-              <span class="currency">
-                грн.
-              </span>
-            </span>
-            <button class="product-card__btn btn" type="button">
-              До кошика
-            </button>
-          </article>
-        </div>
-          <div class="recent__item swiper-slide">
+      <div class="recent__content swiper ">
+        <ul class="recent__content-box swiper-wrapper">
+          <li class="recent__item swiper-slide">
             <article class="product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__img" src="images/content/burger-2.jpg" alt="біфбургер" width="140" height="140">
+                <img class="product-card__img" src="images/content/burger-1.jpg" alt="чізбургер з листям салату"
+                  width="140" height="140">
+              </a>
+              <h3 class="product-card__title">
+                Чізбургер з листям салату
+              </h3>
+              <span class="product-card__price">
+                160
+                <span class="currency">
+                  грн.
+                </span>
+              </span>
+              <button class="product-card__btn btn" type="button">
+                До кошика
+              </button>
+            </article>
+          </li>
+          <li class="recent__item swiper-slide">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="images/content/burger-2.jpg" alt="біфбургер" width="140"
+                  height="140">
               </a>
               <h3 class="product-card__title">
                 Біфбургер
@@ -56,12 +59,12 @@
                 До кошика
               </button>
             </article>
-          </div>
-          <div class="recent__item swiper-slide">
+          </li>
+          <li class="recent__item swiper-slide">
             <article class="product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__img" src="images/content/burger-3.jpg" alt="королівський чізбургер" width="140"
-                  height="140">
+                <img class="product-card__img" src="images/content/burger-3.jpg" alt="королівський чізбургер"
+                  width="140" height="140">
               </a>
               <h3 class="product-card__title">
                 Королівський чізбургер
@@ -76,11 +79,12 @@
                 До кошика
               </button>
             </article>
-          </div>
-          <div class="recent__item swiper-slide">
+          </li>
+          <li class="recent__item swiper-slide">
             <article class="product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__img" src="images/content/burger-4.jpg" alt="чорний гамбургер" width="140" height="140">
+                <img class="product-card__img" src="images/content/burger-4.jpg" alt="чорний гамбургер" width="140"
+                  height="140">
               </a>
               <h3 class="product-card__title">
                 Чорний гамбургер
@@ -95,67 +99,72 @@
                 До кошика
               </button>
             </article>
-          </div>
-          <div class="recent__item swiper-slide"><article class="product-card">
-            <a class="product-card__link" href="#">
-              <img class="product-card__img" src="images/content/burger-5.jpg" alt="чікен бургер" width="140" height="140">
-            </a>
-            <h3 class="product-card__title">
-              Чікен бургер
-            </h3>
-            <span class="product-card__price">
-              180
-              <span class="currently">
-                грн.
-              </span>
-            </span>
-            <button class="product-card__btn btn" type="button">
-              До кошика
-            </button>
-          </article>
-        </div>
-          <div class="recent__item swiper-slide"><article class="product-card">
-            <a class="product-card__link" href="#">
-              <img class="product-card__img" src="images/content/burger-1.jpg" alt="чізбургер з листям салату" width="140"
-                height="140">
-            </a>
-            <h3 class="product-card__title">
-              Чізбургер з листям салату
-            </h3>
-            <span class="product-card__price">
-              160
-              <span class="currency">
-                грн.
-              </span>
-            </span>
-            <button class="product-card__btn btn" type="button">
-              До кошика
-            </button>
-          </article>
-        </div>
-          <div class="recent__item swiper-slide"><article class="product-card">
-            <a class="product-card__link" href="#">
-              <img class="product-card__img" src="images/content/burger-2.jpg" alt="біфбургер" width="140" height="140">
-            </a>
-            <h3 class="product-card__title">
-              Біфбургер
-            </h3>
-            <span class="product-card__price">
-              190
-              <span class="currently">
-                грн.
-              </span>
-            </span>
-            <button class="product-card__btn btn" type="button">
-              До кошика
-            </button>
-          </article>
-        </div>
-          <div class="recent__item swiper-slide">
+          </li>
+          <li class="recent__item swiper-slide">
             <article class="product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__img" src="images/content/burger-3.jpg" alt="королівський чізбургер" width="140"
+                <img class="product-card__img" src="images/content/burger-5.jpg" alt="чікен бургер" width="140"
                   height="140">
+              </a>
+              <h3 class="product-card__title">
+                Чікен бургер
+              </h3>
+              <span class="product-card__price">
+                180
+                <span class="currently">
+                  грн.
+                </span>
+              </span>
+              <button class="product-card__btn btn" type="button">
+                До кошика
+              </button>
+            </article>
+          </li>
+          <li class="recent__item swiper-slide">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="images/content/burger-1.jpg" alt="чізбургер з листям салату"
+                  width="140" height="140">
+              </a>
+              <h3 class="product-card__title">
+                Чізбургер з листям салату
+              </h3>
+              <span class="product-card__price">
+                160
+                <span class="currency">
+                  грн.
+                </span>
+              </span>
+              <button class="product-card__btn btn" type="button">
+                До кошика
+              </button>
+            </article>
+          </li>
+          <li class="recent__item swiper-slide hidden">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="images/content/burger-2.jpg" alt="біфбургер" width="140"
+                  height="140">
+              </a>
+              <h3 class="product-card__title">
+                Біфбургер
+              </h3>
+              <span class="product-card__price">
+                190
+                <span class="currently">
+                  грн.
+                </span>
+              </span>
+              <button class="product-card__btn btn" type="button">
+                До кошика
+              </button>
+            </article>
+          </li>
+          <li class="recent__item swiper-slide hidden">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="images/content/burger-3.jpg" alt="королівський чізбургер"
+                  width="140" height="140">
               </a>
               <h3 class="product-card__title">
                 Королівський чізбургер
@@ -170,26 +179,49 @@
                 До кошика
               </button>
             </article>
-          </div>
-          <div class="recent__item swiper-slide"><article class="product-card">
-            <a class="product-card__link" href="#">
-              <img class="product-card__img" src="images/content/burger-4.jpg" alt="чорний гамбургер" width="140" height="140">
-            </a>
-            <h3 class="product-card__title">
-              Чорний гамбургер
-            </h3>
-            <span class="product-card__price">
-              199
-              <span class="currently">
-                грн.
+          </li>
+          <li class="recent__item swiper-slide hidden">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="images/content/burger-4.jpg" alt="чорний гамбургер" width="140"
+                  height="140">
+              </a>
+              <h3 class="product-card__title">
+                Чорний гамбургер
+              </h3>
+              <span class="product-card__price">
+                199
+                <span class="currently">
+                  грн.
+                </span>
               </span>
-            </span>
-            <button class="product-card__btn btn" type="button">
-              До кошика
-            </button>
-          </article>
-        </div>
-        </div>
+              <button class="product-card__btn btn" type="button">
+                До кошика
+              </button>
+            </article>
+          </li>
+          <li class="recent__item swiper-slide hidden">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="images/content/burger-4.jpg" alt="чорний гамбургер" width="140"
+                  height="140">
+              </a>
+              <h3 class="product-card__title">
+                Чорний гамбургер
+              </h3>
+              <span class="product-card__price">
+                199
+                <span class="currently">
+                  грн.
+                </span>
+              </span>
+              <button class="product-card__btn btn" type="button">
+                До кошика
+              </button>
+            </article>
+          </li>
+        </ul>
+        <div class="recent__pag swiper-pagination"></div>
       </div>
     </div>
   </div>

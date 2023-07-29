@@ -81,6 +81,14 @@ body {
     line-height: 1.5;
     color: $title;
     text-decoration: underline;
+
+    @include r($tb) {
+      font-size: 18px;
+    }
+
+    @include r($ph) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -96,7 +104,7 @@ body {
   border-radius: 5px;
   border: 2px solid transparent;
   position: relative;
-  transition: border-color 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s, fill 0.5s;
+  transition: border-color 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s, fill 0.5s, stroke 0.5s;
 
   @include r($ph) {
     padding: 6px 16px;
@@ -107,6 +115,12 @@ body {
     background-color: rgba(255, 104, 56, 0.10);
     color: $accent;
     fill: $accent;
+    stroke: $accent;
+
+    .description__icon {
+      stroke: $accent;
+
+    }
   }
 
   &:hover {
@@ -118,6 +132,11 @@ body {
 
     .footer__form-icon {
       fill: $accent;
+    }
+
+    .description__icon {
+      stroke: $accent;
+
     }
   }
 
@@ -134,6 +153,14 @@ body {
     @include r($ph) {
       padding: 6px 24px;
       font-size: 14px;
+    }
+  }
+
+  &--product {
+    padding: 10px 34px;
+
+    @include r($ph) {
+      padding: 13px 51px;
     }
   }
 
@@ -345,6 +372,7 @@ body {
   &__list {
     display: flex;
     padding: 19px 0;
+    overflow: auto;
   }
 
   &__item {
@@ -376,6 +404,7 @@ body {
     line-height: 1.2;
     letter-spacing: 0.3px;
     color: #505050;
+    white-space: nowrap;
   }
 }
 

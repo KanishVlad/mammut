@@ -6,9 +6,34 @@
 })
 
 <main class="main">
+  <section class="top">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="index.html">
+              Головна
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="product.html">
+              Каталог продуктів
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link" href="#">
+              Чізбургер з листям салату
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-@include('components/_breadcrumbs-product.html')
-@include('components/_recent.html')
+  @include('components/_description.html')
+  @include('components/_interection.html') 
+
+  @include('components/_recent.html')
 
 </main>
 

@@ -56,15 +56,12 @@
       transition: border-color 0.5s, background-color 0.5s;
       position: relative;
 
-
-
-
       &:focus {
         border-color: $accent;
       }
 
       &:hover {
-        background-color: #FFF2ED;
+        background-color: $bg-btn-hov;
         border-color: rgba(255, 104, 56, 0.50);
       }
 
