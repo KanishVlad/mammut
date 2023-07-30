@@ -104,7 +104,9 @@ function build() {
   return src([
     'app/**/*.html',
     'app/css/style.min.css',
-    'app/js/main.min.js'
+    'app/js/main.min.js',
+    'app/fonts/*.woff',
+    'app/fonts/*.woff2',
   ], { base: 'app' })
     .pipe(dest('dist'))
 }
