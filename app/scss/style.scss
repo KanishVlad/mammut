@@ -6,6 +6,38 @@
 @import 'global';
 
 
+.header {
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+      content: '';
+      background-color: #191919;
+      z-index: -1;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.75;
+  }
+}
+
+.header__top {
+  &-text {
+    font-size: 10px;
+    line-height: 13.2px;
+    letter-spacing: 0.72px;
+    text-align: center;
+    padding: 11px 0 35px;
+  }
+}
+
+
 
 
 
