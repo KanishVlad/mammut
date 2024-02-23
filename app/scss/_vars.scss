@@ -1,26 +1,3 @@
-$accent: #ff6838;
-$title: #363853;
-$text: #31352b;
-$bg: #f9faff;
-$silver-200: #ececec;
-$gray: #c2c2c2;
-$bg-btn-hov: #fff2ed;
-$line: #e4e4e4;
-$border: #ececec;
-$bg-lite: #faeded;
-//breakpoints
-
-$pc: 1200;
-$tb-2: 992;
-$tb: 768;
-$ph: 576;
-$phm: 360;
-
-@mixin r($width) {
-  @media (max-width: #{$width}px) {
-    @content;
-  }
-}
 
 
 
